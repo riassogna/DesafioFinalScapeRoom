@@ -5,12 +5,14 @@ using UnityEngine;
 public class Linterna : MonoBehaviour
 {
     public GameObject linterna;
+    public GameObject linternaenmano;
     public bool laTengo;
 
     // Start is called before the first frame update
     void Start()
     {
-        laTengo = false;   
+        laTengo = false;
+        linternaenmano.SetActive(false);   
     }
 
     // Update is called once per frame
@@ -23,6 +25,7 @@ public class Linterna : MonoBehaviour
     {
         laTengo = true;
         linterna.SetActive(false);
+        linternaenmano.SetActive(true); 
         Debug.Log("tengo la linterna");
     }
 }
